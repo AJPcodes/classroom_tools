@@ -1,0 +1,87 @@
+/*Colors:
+
+NASHVILLE PREDATORS
+#FDBB2F Gold
+#002E62 BLue
+*/
+body {
+	background-color: #FDBB2F;
+}
+
+.content {
+	background-color: #002E62;
+	width: 70%;
+	margin: 5% 15%;
+	border: 3px solid white;
+}
+
+h1, h2, h3, h4, h5 {
+	color: #FDBB2F;
+}
+
+.tools {
+	background-color: #FDBB2F;
+	width: 90%;
+	margin: 5%;
+	border: 3px solid white;
+}
+
+.tools button {
+	margin: 1% 2%;
+}
+
+div {
+text-align: center;
+float:left;
+width: 40%;
+margin: 2% 5%;
+}
+
+div li {
+	background-color: white;
+	list-style: none;
+	border: 3px solid #FDBB2F;
+	border-radius: 15px;
+	padding: 3px;
+	line-height: 1.5em;
+	color: #002E62;
+	font-weight: bolder;
+	font-size: 1.5em;
+	margin: 0 0 1em;
+
+}
+
+/*CSS 3 Button*/
+
+button {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #ffffff;
+	padding: 10px 20px;
+	background: -moz-linear-gradient(
+		top,
+		#fdbc2f 0%,
+		#fdbc2f 10%,
+		#0004e6);
+	background: -webkit-gradient(
+		linear, left top, left bottom,
+		from(#fdbc2f),
+		color-stop(0.10, #fdbc2f),
+		to(#0004e6));
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border: 3px solid #706962;
+	-moz-box-shadow:
+		3px 1px 3px rgba(000,000,000,0.7),
+		inset 0px 1px 0px rgba(255,255,255,0.7);
+	-webkit-box-shadow:
+		3px 1px 3px rgba(000,000,000,0.7),
+		inset 0px 1px 0px rgba(255,255,255,0.7);
+	box-shadow:
+		3px 1px 3px rgba(000,000,000,0.7),
+		inset 0px 1px 0px rgba(255,255,255,0.7);
+	text-shadow:
+		0px 2px 5px rgba(0,0,0,1),
+		0px 1px 0px rgba(255,255,255,0.3);
+}
