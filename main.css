@@ -53,7 +53,7 @@ div li {
 
 /*CSS 3 Button*/
 
-button {
+.tools button {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	color: #ffffff;
@@ -84,4 +84,16 @@ button {
 	text-shadow:
 		0px 2px 5px rgba(0,0,0,1),
 		0px 1px 0px rgba(255,255,255,0.3);
+}
+
+.pending button, .finished button {
+	display: inline-block;
+	margin: 3px;
+	height: 1.5em;
+	line-height: 1.5em;
+	color: #FDBB2F;
+	background-color: #002E62;
+	border: 2px solid #FDBB2F;
+
+
 }

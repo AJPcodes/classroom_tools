@@ -19,14 +19,16 @@ var students;
 //
 
 
-//Function to create a list item and append it to "pendingPen"
+//Function to create a new student list item and append it to "pendingPen"
 
 var addNewStudent = function() {
 	console.log('addNewStudent Called');
 
 	var newStudent = document.createElement('li');
 	var newStudentName = prompt("What's the student's name?");
-
+	while (newStudentName === "") {
+		newStudentName = prompt("Please enter a name.")
+	};
 	newStudent.innerText = newStudentName;
 	pendingPen.appendChild(newStudent);
 	bindToList();
@@ -83,9 +85,48 @@ var bindToList = function() {
 	}
 };
 
+//function to enable options
+
 var editMode = function() {
 	console.log("Edit Mode Called");
+	if (this.childNodes.length === 1) {
+	var removeButton = document.createElement('button');
+	removeButton.innerText = "Remove";
+	this.appendChild(removeButton);
+	//Event handler to call "deleteName"
+	removeButton.addEventListener('click', removeName);
+
+	var editButton = document.createElement('button');
+	editButton.innerText = "Edit";
+	this.appendChild(editButton);
+	//Event handler to call "editName"
+	editButton.addEventListener('click', editName);
+
+	} else {
+		var nodesToRemove = this.getElementsByTagName('button');
+		console.log(nodesToRemove);
+		console.log(nodesToRemove.length)
+		while (nodesToRemove.length > 0) {
+			this.removeChild(nodesToRemove[0]);
+		}
+
+	};
 };
+
+var removeName = function() {
+	this.parentNode.parentNode.removeChild(this.parentNode);
+};
+
+var editName = function() {
+	var newName = prompt('New Name');
+
+	while (newName === "") {
+		newName = prompt('New Name');
+	};
+	this.parentNode.innerText = newName;
+};
+
+
 //Event Handlers!
 //
 //
